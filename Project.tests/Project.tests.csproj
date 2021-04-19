@@ -6,11 +6,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{3CAB4E0B-CD02-4A61-AB3F-C89799C0FD87}</ProjectGuid>
+    <ProjectGuid>{477767E1-FB82-409B-9D63-B8DCB7AED9AB}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Project</RootNamespace>
-    <AssemblyName>Project</AssemblyName>
+    <RootNamespace>Project.tests</RootNamespace>
+    <AssemblyName>Project.tests</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -35,15 +35,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="black.core, Version=0.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\FitNesseBlack.1.0.1\lib\black.core.dll</HintPath>
-    </Reference>
-    <Reference Include="fit, Version=2.8.7711.29733, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\FitSharp.2.8.2.1\lib\net462\fit.dll</HintPath>
-    </Reference>
-    <Reference Include="fitSharp, Version=2.8.7711.29731, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\FitSharp.2.8.2.1\lib\net462\fitSharp.dll</HintPath>
-    </Reference>
     <Reference Include="nunit.framework, Version=3.13.1.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
       <HintPath>..\packages\NUnit.3.13.1\lib\net45\nunit.framework.dll</HintPath>
     </Reference>
@@ -57,12 +48,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="InsuranceService.cs" />
-    <Compile Include="MyFixture.cs" />
+    <Compile Include="Class1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Project\Project.csproj">
+      <Project>{3cab4e0b-cd02-4a61-ab3f-c89799c0fd87}</Project>
+      <Name>Project</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
